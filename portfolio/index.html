@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Abdul Samad – Software Engineering student at ITU Lahore. Portfolio showcasing AI, C++, Python, Docker projects and skills." />
+  <meta name="keywords" content="Abdul Samad, Software Engineer, Portfolio, ITU Lahore, AI, Python, C++, Docker, LangChain" />
+  <meta name="author" content="Abdul Samad" />
+  <title>Abdul Samad | Software Engineer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==============================
+       PRELOADER
+  ================================= -->
+  <div id="preloader" aria-label="Loading">
+    <div class="preloader-inner">
+      <div class="preloader-logo">AS</div>
+      <div class="preloader-bar">
+        <div class="preloader-fill"></div>
+      </div>
+      <p class="preloader-text">Initializing...</p>
+    </div>
+  </div>
+
+  <!-- ==============================
+       CURSOR GLOW
+  ================================= -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ==============================
+       NAVBAR
+  ================================= -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+        <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+        <li><a href="#education" class="nav-link" id="nav-education">Education</a></li>
+        <li><a href="#achievements" class="nav-link" id="nav-achievements">Achievements</a></li>
+        <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==============================
+       HERO SECTION
+  ================================= -->
+  <section id="hero" class="hero-section">
+    <!-- Animated Particle Background -->
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <!-- Floating noise orbs -->
+    <div class="hero-orb hero-orb--1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb--3" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-greeting reveal-text">
+          <span class="greeting-icon">👋</span>
+          <span>Hello, World! I'm</span>
+        </div>
+
+        <h1 class="hero-name">
+          <span class="name-letter" style="--i:0">A</span><span class="name-letter" style="--i:1">b</span><span class="name-letter" style="--i:2">d</span><span class="name-letter" style="--i:3">u</span><span class="name-letter" style="--i:4">l</span>
+          <span class="name-space">&nbsp;</span>
+          <span class="name-letter name-accent" style="--i:5">S</span><span class="name-letter name-accent" style="--i:6">a</span><span class="name-letter name-accent" style="--i:7">m</span><span class="name-letter name-accent" style="--i:8">a</span><span class="name-letter name-accent" style="--i:9">d</span>
+        </h1>
+
+        <div class="hero-role">
+          <span class="role-prefix">I'm a&nbsp;</span>
+          <span class="typed-text" id="typedText" aria-live="polite"></span>
+          <span class="typed-cursor" aria-hidden="true">|</span>
+        </div>
+
+        <p class="hero-description">
+          Software Engineering student at <span class="highlight">ITU Lahore</span> passionate about building
+          scalable, efficient real-world applications. Exploring <span class="highlight">AI&nbsp;/ ML</span>,
+          <span class="highlight">LangChain</span>, and modern DevOps practices.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn--primary" id="viewWorkBtn">
+            <span>View My Work</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn--outline" id="hireMeBtn">
+            <span>Hire Me</span>
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+
+        <div class="hero-social">
+          <a href="https://github.com/bsse23014ituedupk" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/abdulsamad" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:abdulsamad@email.com" class="social-icon" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+923286008528" class="social-icon" aria-label="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-image-ring ring-1" aria-hidden="true"></div>
+        <div class="hero-image-ring ring-2" aria-hidden="true"></div>
+        <div class="hero-image-ring ring-3" aria-hidden="true"></div>
+        <div class="hero-image-container">
+          <!-- Replace with real profile photo -->
+          <img src="images/profile.png" alt="Abdul Samad - Software Engineer" class="hero-img" id="heroImg" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'340\' height=\'340\'%3E%3Cdefs%3E%3ClinearGradient id=\'g\' x1=\'0\' y1=\'0\' x2=\'1\' y2=\'1\'%3E%3Cstop offset=\'0\' stop-color=\'%2300d4ff\' stop-opacity=\'0.3\'/%3E%3Cstop offset=\'1\' stop-color=\'%23a855f7\' stop-opacity=\'0.4\'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'340\' height=\'340\' fill=\'%230d0d1f\'/%3E%3Crect width=\'340\' height=\'340\' fill=\'url(%23g)\'/%3E%3Ctext x=\'50%25\' y=\'45%25\' font-family=\'Arial\' font-size=\'80\' fill=\'%2300d4ff\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E👤%3C/text%3E%3Ctext x=\'50%25\' y=\'70%25\' font-family=\'Arial\' font-size=\'22\' fill=\'%23e2e8f0\' text-anchor=\'middle\'%3EAbdul Samad%3C/text%3E%3C/svg%3E'" />
+          <div class="hero-image-glow" aria-hidden="true"></div>
+        </div>
+        <!-- Floating badges -->
+        <div class="float-badge float-badge--1" aria-hidden="true">
+          <i class="fab fa-python"></i> Python
+        </div>
+        <div class="float-badge float-badge--2" aria-hidden="true">
+          <i class="fab fa-docker"></i> Docker
+        </div>
+        <div class="float-badge float-badge--3" aria-hidden="true">
+          <i class="fas fa-brain"></i> AI/ML
+        </div>
+        <div class="float-badge float-badge--4" aria-hidden="true">
+          <i class="fas fa-code"></i> C++
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ==============================
+       ABOUT SECTION
+  ================================= -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-col" data-animate="fade-right">
+          <div class="about-img-wrapper">
+            <img src="images/profile.png" alt="Abdul Samad" class="about-img" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'450\'%3E%3Cdefs%3E%3ClinearGradient id=\'g\' x1=\'0\' y1=\'0\' x2=\'1\' y2=\'1\'%3E%3Cstop offset=\'0\' stop-color=\'%2300d4ff\' stop-opacity=\'0.15\'/%3E%3Cstop offset=\'1\' stop-color=\'%23a855f7\' stop-opacity=\'0.25\'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'400\' height=\'450\' fill=\'%230d0d1f\' rx=\'20\'/%3E%3Crect width=\'400\' height=\'450\' fill=\'url(%23g)\' rx=\'20\'/%3E%3Ctext x=\'50%25\' y=\'40%25\' font-family=\'Arial\' font-size=\'90\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E👨‍💻%3C/text%3E%3Ctext x=\'50%25\' y=\'65%25\' font-family=\'Arial\' font-size=\'24\' fill=\'%2300d4ff\' text-anchor=\'middle\'%3EAbdul Samad%3C/text%3E%3Ctext x=\'50%25\' y=\'78%25\' font-family=\'Arial\' font-size=\'14\' fill=\'%2394a3b8\' text-anchor=\'middle\'%3ESoftware Engineer%3C/text%3E%3C/svg%3E'" />
+            <div class="about-img-border" aria-hidden="true"></div>
+            <div class="about-img-dots" aria-hidden="true"></div>
+          </div>
+          <!-- Stats cards -->
+          <div class="about-stats">
+            <div class="stat-card" data-animate="zoom-in">
+              <div class="stat-number" data-target="4">0</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-card" data-animate="zoom-in">
+              <div class="stat-number" data-target="3">0</div>
+              <div class="stat-label">Languages</div>
+            </div>
+            <div class="stat-card" data-animate="zoom-in">
+              <div class="stat-number" data-target="6">0</div>
+              <div class="stat-label">Semesters</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text-col" data-animate="fade-left">
+          <h3 class="about-subtitle">6th Semester Software Engineering Student</h3>
+          <p class="about-bio">
+            I'm <strong>Abdul Samad</strong>, a passionate Software Engineering student at
+            <strong>Information Technology University (ITU), Lahore</strong> with strong foundations
+            in Data Structures, Object-Oriented Programming, and algorithmic problem solving.
+          </p>
+          <p class="about-bio">
+            Currently deep-diving into <span class="highlight">Machine Learning</span>,
+            <span class="highlight">Generative AI</span>, and <span class="highlight">LangChain</span>,
+            I love building real-world applications that solve meaningful problems. I also have
+            hands-on experience with <strong>Docker</strong>, <strong>CI/CD pipelines</strong>, and
+            <strong>Streamlit</strong> for rapid AI app deployment.
+          </p>
+          <p class="about-bio">
+            I'm actively seeking an <strong>internship</strong> to apply my skills in a professional
+            environment, collaborate with talented teams, and grow as a developer.
+          </p>
+
+          <div class="about-info-grid">
+            <div class="info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <span class="info-label">Degree</span>
+                <span class="info-value">BS Software Engineering</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-university"></i>
+              <div>
+                <span class="info-label">University</span>
+                <span class="info-value">ITU, Lahore</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-calendar-alt"></i>
+              <div>
+                <span class="info-label">Batch</span>
+                <span class="info-value">2023 – 2027</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-value">Lahore, Pakistan</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn--primary about-cta">
+            <span>Let's Connect</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       SKILLS SECTION
+  ================================= -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Skill Category Pills -->
+      <div class="skill-categories" data-animate="fade-up">
+        <button class="skill-cat-btn active" data-cat="all" id="catAll">All</button>
+        <button class="skill-cat-btn" data-cat="languages" id="catLanguages">Languages</button>
+        <button class="skill-cat-btn" data-cat="concepts" id="catConcepts">Core Concepts</button>
+        <button class="skill-cat-btn" data-cat="ai" id="catAI">AI / ML</button>
+        <button class="skill-cat-btn" data-cat="tools" id="catTools">Tools & DevOps</button>
+      </div>
+
+      <!-- Skill Bars -->
+      <div class="skills-grid">
+
+        <!-- Languages -->
+        <div class="skill-group" data-cat="languages" data-animate="fade-up">
+          <div class="skill-group-header">
+            <i class="fas fa-code skill-group-icon"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name"><i class="fab fa-cuttlefish"></i> C++</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="85" style="--color: #00d4ff;"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name"><i class="fab fa-python"></i> Python</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="80" style="--color: #f7d44c;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Concepts -->
+        <div class="skill-group" data-cat="concepts" data-animate="fade-up">
+          <div class="skill-group-header">
+            <i class="fas fa-brain skill-group-icon"></i>
+            <h3>Core Concepts</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name"><i class="fas fa-project-diagram"></i> Data Structures & Algorithms</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="80" style="--color: #a855f7;"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name"><i class="fas fa-cubes"></i> Object-Oriented Programming</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="85" style="--color: #ec4899;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI / ML -->
+        <div class="skill-group" data-cat="ai" data-animate="fade-up">
+          <div class="skill-group-header">
+            <i class="fas fa-robot skill-group-icon"></i>
+            <h3>AI / ML</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name"><i class="fas fa-chart-line"></i> Machine Learning</span>
+              <span class="skill-percent">60%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="60" style="--color: #10b981;"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name"><i class="fas fa-magic"></i> Generative AI</span>
+              <span class="skill-percent">55%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="55" style="--color: #f59e0b;"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name"><i class="fas fa-link"></i> LangChain</span>
+              <span class="skill-percent">50%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="50" style="--color: #6366f1;"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name"><i class="fas fa-stream"></i> Streamlit</span>
+              <span class="skill-percent">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="70" style="--color: #ef4444;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & DevOps -->
+        <div class="skill-group" data-cat="tools" data-animate="fade-up">
+          <div class="skill-group-header">
+            <i class="fas fa-tools skill-group-icon"></i>
+            <h3>Tools & DevOps</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name"><i class="fab fa-docker"></i> Docker</span>
+              <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="75" style="--color: #0ea5e9;"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name"><i class="fab fa-github"></i> GitHub / Git</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="80" style="--color: #e2e8f0;"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name"><i class="fas fa-infinity"></i> GitHub Actions (CI/CD)</span>
+              <span class="skill-percent">65%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="65" style="--color: #22c55e;"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name"><i class="fas fa-chart-bar"></i> KNIME</span>
+              <span class="skill-percent">60%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="60" style="--color: #fb923c;"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name"><i class="fab fa-aws"></i> AWS</span>
+              <span class="skill-percent">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="70" style="--color: #f59e0b;"></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /skills-grid -->
+
+      <!-- Tech Icon Cloud -->
+      <div class="tech-cloud" data-animate="fade-up">
+        <div class="tech-pill"><i class="fab fa-python"></i> Python</div>
+        <div class="tech-pill"><i class="fas fa-code"></i> C++</div>
+        <div class="tech-pill"><i class="fab fa-docker"></i> Docker</div>
+        <div class="tech-pill"><i class="fab fa-github"></i> GitHub</div>
+        <div class="tech-pill"><i class="fas fa-robot"></i> LangChain</div>
+        <div class="tech-pill"><i class="fas fa-stream"></i> Streamlit</div>
+        <div class="tech-pill"><i class="fas fa-infinity"></i> CI/CD</div>
+        <div class="tech-pill"><i class="fas fa-brain"></i> Gen AI</div>
+        <div class="tech-pill"><i class="fas fa-chart-bar"></i> KNIME</div>
+        <div class="tech-pill"><i class="fab fa-aws"></i> AWS</div>
+        <div class="tech-pill"><i class="fas fa-cubes"></i> OOP</div>
+        <div class="tech-pill"><i class="fas fa-project-diagram"></i> DSA</div>
+        <div class="tech-pill"><i class="fas fa-chart-line"></i> ML</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       PROJECTS SECTION
+  ================================= -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: AI Study Assistant -->
+        <article class="project-card" data-animate="fade-up" id="project-ai">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-img-wrapper">
+                <img src="images/AiChatbot.png" alt="AI Study Assistant project screenshot" class="project-img" />
+                <div class="project-overlay" aria-hidden="true">
+                  <span class="project-overlay-text">See Details</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag--python">Python</span>
+                  <span class="tag tag--stream">Streamlit</span>
+                  <span class="tag tag--lang">LangChain</span>
+                </div>
+                <h3 class="project-title">AI Study Assistant</h3>
+                <p class="project-subtitle">PDF Chatbot powered by LangChain & Streamlit</p>
+                <a href="https://github.com/bsse23014ituedupk/AIStudyAssistant-" target="_blank" rel="noopener noreferrer" class="card-front-btn" id="ai-github-btn">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            <div class="project-card-back">
+              <h3 class="back-title">AI Study Assistant</h3>
+              <p class="back-desc">An AI-powered chatbot that answers user queries from uploaded PDF documents. Features context-aware query answering, document parsing, and response generation pipelines using Python and Streamlit.</p>
+              <ul class="back-features">
+                <li><i class="fas fa-check-circle"></i> Context-aware PDF Q&amp;A</li>
+                <li><i class="fas fa-check-circle"></i> Document parsing pipelines</li>
+                <li><i class="fas fa-check-circle"></i> LangChain semantic retrieval</li>
+                <li><i class="fas fa-check-circle"></i> Streamlit web interface</li>
+              </ul>
+              <div class="back-links">
+                <a href="https://github.com/bsse23014ituedupk/AIStudyAssistant-" target="_blank" rel="noopener noreferrer" class="back-btn" aria-label="View AI Study Assistant on GitHub">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: University Management System -->
+        <article class="project-card" data-animate="fade-up" id="project-ums">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-img-wrapper">
+                <img src="images/ums.png" alt="University Management System project screenshot" class="project-img" />
+                <div class="project-overlay" aria-hidden="true">
+                  <span class="project-overlay-text">See Details</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag--cpp">C++</span>
+                  <span class="tag tag--oop">OOP</span>
+                </div>
+                <h3 class="project-title">University Management System</h3>
+                <p class="project-subtitle">Full-featured desktop academic management system</p>
+                <a href="https://github.com/bsse23014ituedupk/universityManagmentSystemoop" target="_blank" rel="noopener noreferrer" class="card-front-btn" id="ums-github-btn">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            <div class="project-card-back">
+              <h3 class="back-title">University Management System</h3>
+              <p class="back-desc">A fully-featured desktop system to manage students, faculty, and academic operations. Demonstrates advanced OOP principles including inheritance, polymorphism, aggregation, and composition.</p>
+              <ul class="back-features">
+                <li><i class="fas fa-check-circle"></i> Student &amp; faculty modules</li>
+                <li><i class="fas fa-check-circle"></i> Enrollment &amp; course handling</li>
+                <li><i class="fas fa-check-circle"></i> Attendance &amp; grading system</li>
+                <li><i class="fas fa-check-circle"></i> Full OOP architecture</li>
+              </ul>
+              <div class="back-links">
+                <a href="https://github.com/bsse23014ituedupk/universityManagmentSystemoop" target="_blank" rel="noopener noreferrer" class="back-btn" aria-label="View UMS on GitHub">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: UMS Containerized Deployment -->
+        <article class="project-card" data-animate="fade-up" id="project-docker">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-img-wrapper">
+                <img src="images/dockerPro.png" alt="UMS Containerized Deployment screenshot" class="project-img" />
+                <div class="project-overlay" aria-hidden="true">
+                  <span class="project-overlay-text">See Details</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag--docker">Docker</span>
+                  <span class="tag tag--gh">GitHub Actions</span>
+                  <span class="tag tag--aws">AWS</span>
+                </div>
+                <h3 class="project-title">UMS Containerized Deployment</h3>
+                <p class="project-subtitle">Docker + CI/CD + AWS microservices deployment</p>
+                <a href="https://github.com/bsse23014ituedupk/UMS.MicroServices" target="_blank" rel="noopener noreferrer" class="card-front-btn" id="docker-github-btn">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            <div class="project-card-back">
+              <h3 class="back-title">UMS Containerized Deployment</h3>
+              <p class="back-desc">Deployed the University Management System in a containerized environment using Docker for portable and consistent deployment, with automated CI/CD workflows managed by GitHub Actions.</p>
+              <ul class="back-features">
+                <li><i class="fas fa-check-circle"></i> Docker containerization</li>
+                <li><i class="fas fa-check-circle"></i> GitHub Actions CI/CD</li>
+                <li><i class="fas fa-check-circle"></i> Version control workflows</li>
+                <li><i class="fas fa-check-circle"></i> Microservices architecture</li>
+              </ul>
+              <div class="back-links">
+                <a href="https://github.com/bsse23014ituedupk/UMS.MicroServices" target="_blank" rel="noopener noreferrer" class="back-btn" aria-label="View UMS Deployment on GitHub">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Rescue Line System -->
+        <article class="project-card" data-animate="fade-up" id="project-rescue">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-img-wrapper">
+                <img src="images/rescueLineLink.png" alt="Rescue Line System project screenshot" class="project-img" />
+                <div class="project-overlay" aria-hidden="true">
+                  <span class="project-overlay-text">See Details</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag--cpp">C++</span>
+                  <span class="tag tag--dsa">DSA</span>
+                </div>
+                <h3 class="project-title">Rescue Line System</h3>
+                <p class="project-subtitle">Optimized rescue-routing engine using advanced data structures</p>
+                <a href="https://github.com/bsse23014ituedupk/RescueLinkC-ProjectDSA" target="_blank" rel="noopener noreferrer" class="card-front-btn" id="rescue-github-btn">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            <div class="project-card-back">
+              <h3 class="back-title">Rescue Line System</h3>
+              <p class="back-desc">An optimized rescue-routing system built using core Data Structures concepts. Features a priority-based routing engine with algorithm optimization and structured, clean data handling techniques.</p>
+              <ul class="back-features">
+                <li><i class="fas fa-check-circle"></i> Priority-based routing</li>
+                <li><i class="fas fa-check-circle"></i> Advanced graph algorithms</li>
+                <li><i class="fas fa-check-circle"></i> Algorithm optimization</li>
+                <li><i class="fas fa-check-circle"></i> Clean DSA architecture</li>
+              </ul>
+              <div class="back-links">
+                <a href="https://github.com/bsse23014ituedupk/RescueLinkC-ProjectDSA" target="_blank" rel="noopener noreferrer" class="back-btn" aria-label="View Rescue Line on GitHub">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: FastAPI Patient Management -->
+        <article class="project-card project-card--wide" data-animate="fade-up" id="project-fastapi">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-img-wrapper">
+                <img src="images/fastApi.png" alt="FastAPI Patient Management project" class="project-img" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'200\'%3E%3Cdefs%3E%3ClinearGradient id=\'g\' x1=\'0\' y1=\'0\' x2=\'1\' y2=\'1\'%3E%3Cstop offset=\'0\' stop-color=\'%23060611\'/%3E%3Cstop offset=\'1\' stop-color=\'%231a1000\'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'800\' height=\'200\' fill=\'url(%23g)\'/%3E%3Ctext x=\'50%25\' y=\'40%25\' font-family=\'Arial\' font-size=\'40\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E%E2%9A%A1%3C/text%3E%3Ctext x=\'50%25\' y=\'68%25\' font-family=\'Arial\' font-size=\'18\' fill=\'%23f59e0b\' text-anchor=\'middle\'%3EPatient+Management+FastAPI%3C/text%3E%3C/svg%3E'" />
+                <div class="project-overlay" aria-hidden="true">
+                  <span class="project-overlay-text">See Details</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag--python">Python</span>
+                  <span class="tag tag--api">FastAPI</span>
+                </div>
+                <h3 class="project-title">Patient Management API</h3>
+                <p class="project-subtitle">RESTful FastAPI service for patient data management</p>
+                <a href="https://github.com/bsse23014ituedupk/patient-management-fastapi" target="_blank" rel="noopener noreferrer" class="card-front-btn" id="fastapi-github-btn">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+            <div class="project-card-back">
+              <h3 class="back-title">Patient Management FastAPI</h3>
+              <p class="back-desc">A RESTful API built with FastAPI for managing patient data efficiently. Demonstrates clean API design, proper routing, data validation, and Python backend development best practices.</p>
+              <ul class="back-features">
+                <li><i class="fas fa-check-circle"></i> RESTful API design</li>
+                <li><i class="fas fa-check-circle"></i> FastAPI framework</li>
+                <li><i class="fas fa-check-circle"></i> Data validation</li>
+                <li><i class="fas fa-check-circle"></i> Clean Python backend</li>
+              </ul>
+              <div class="back-links">
+                <a href="https://github.com/bsse23014ituedupk/patient-management-fastapi" target="_blank" rel="noopener noreferrer" class="back-btn" aria-label="View Patient Management on GitHub">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /projects-grid -->
+
+      <div class="projects-cta" data-animate="fade-up">
+        <a href="https://github.com/bsse23014ituedupk" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg">
+          <i class="fab fa-github"></i>
+          <span>View All on GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       EDUCATION SECTION
+  ================================= -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Academic Background</span>
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item" data-animate="fade-right">
+          <div class="timeline-dot">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="timeline-content glass">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="timeline-title">BS Software Engineering</h3>
+                <span class="timeline-org">Information Technology University (ITU)</span>
+                <span class="timeline-loc"><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</span>
+              </div>
+              <div class="timeline-date-badge">
+                <i class="fas fa-calendar"></i>
+                2023 – 2027
+              </div>
+            </div>
+            <div class="timeline-body">
+              <p>Currently in <strong>6th Semester</strong>, maintaining a strong academic foundation in:</p>
+              <div class="course-chips">
+                <span class="chip">Data Structures & Algorithms</span>
+                <span class="chip">Object-Oriented Programming</span>
+                <span class="chip">Machine Learning</span>
+                <span class="chip">Software Engineering</span>
+                <span class="chip">Database Systems</span>
+                <span class="chip">Operating Systems</span>
+                <span class="chip">Computer Networks</span>
+              </div>
+            </div>
+            <div class="timeline-footer">
+              <div class="itu-badge">
+                <i class="fas fa-university"></i>
+                <span>ITU Lahore</span>
+              </div>
+              <div class="sem-badge">
+                <i class="fas fa-layer-group"></i>
+                <span>6th Semester</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       ACHIEVEMENTS SECTION
+  ================================= -->
+  <section id="achievements" class="section achievements-section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Highlights</span>
+        <h2 class="section-title">Achievements & <span class="gradient-text">Highlights</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card glass" data-animate="zoom-in">
+          <div class="achievement-icon">
+            <i class="fab fa-docker"></i>
+          </div>
+          <h3 class="achievement-title">Docker & DevOps</h3>
+          <p class="achievement-desc">Hands-on experience containerizing applications with Docker and managing version control for real-world project deployments.</p>
+          <div class="achievement-tag">DevOps</div>
+        </div>
+
+        <div class="achievement-card glass" data-animate="zoom-in">
+          <div class="achievement-icon">
+            <i class="fas fa-infinity"></i>
+          </div>
+          <h3 class="achievement-title">CI/CD Automation</h3>
+          <p class="achievement-desc">Built and managed automated CI/CD pipelines using GitHub Actions for consistent, reliable software delivery workflows.</p>
+          <div class="achievement-tag">Automation</div>
+        </div>
+
+        <div class="achievement-card glass" data-animate="zoom-in">
+          <div class="achievement-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3 class="achievement-title">AI Application Builder</h3>
+          <p class="achievement-desc">Actively building AI-powered applications using LangChain and Streamlit, exploring the frontier of Generative AI and LLMs.</p>
+          <div class="achievement-tag">AI / ML</div>
+        </div>
+
+        <div class="achievement-card glass" data-animate="zoom-in">
+          <div class="achievement-icon">
+            <i class="fas fa-code-branch"></i>
+          </div>
+          <h3 class="achievement-title">Full-Stack Project Delivery</h3>
+          <p class="achievement-desc">Designed and delivered multiple end-to-end software projects from ideation to deployment, demonstrating full software lifecycle skills.</p>
+          <div class="achievement-tag">Engineering</div>
+        </div>
+
+        <div class="achievement-card glass" data-animate="zoom-in">
+          <div class="achievement-icon">
+            <i class="fas fa-puzzle-piece"></i>
+          </div>
+          <h3 class="achievement-title">Algorithm Design</h3>
+          <p class="achievement-desc">Built optimized algorithmic solutions using advanced data structures — graphs, priority queues, and routing algorithms.</p>
+          <div class="achievement-tag">DSA</div>
+        </div>
+
+        <div class="achievement-card glass" data-animate="zoom-in">
+          <div class="achievement-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 class="achievement-title">ITU Scholar</h3>
+          <p class="achievement-desc">Enrolled at one of Pakistan's top CS/SE institutions — Information Technology University, Lahore — pursuing BS Software Engineering.</p>
+          <div class="achievement-tag">Education</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       CONTACT SECTION
+  ================================= -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">I'm actively looking for internship opportunities. Let's connect!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info" data-animate="fade-right">
+          <h3 class="contact-info-title">Let's Talk 💬</h3>
+          <p class="contact-info-desc">Whether you have an internship opportunity, a collaboration idea, or just want to say hi — I'd love to hear from you.</p>
+
+          <div class="contact-details">
+            <a href="mailto:abdulsamad@email.com" class="contact-detail-item" id="emailLink">
+              <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="detail-label">Email</span>
+                <span class="detail-value">abdulsamad@email.com</span>
+              </div>
+            </a>
+            <a href="tel:+923286008528" class="contact-detail-item" id="phoneLink">
+              <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <span class="detail-label">Phone</span>
+                <span class="detail-value">+92 328 6008528</span>
+              </div>
+            </a>
+            <div class="contact-detail-item" id="locationItem">
+              <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span class="detail-label">Location</span>
+                <span class="detail-value">Lahore, Pakistan</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <a href="https://github.com/bsse23014ituedupk" target="_blank" rel="noopener noreferrer" class="social-link" id="githubContactLink" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/abdulsamad" target="_blank" rel="noopener noreferrer" class="social-link" id="linkedinContactLink" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+
+          <!-- Availability badge -->
+          <div class="availability-badge">
+            <span class="avail-dot"></span>
+            <span>Available for internships &amp; collaborations</span>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form glass" id="contactForm" data-animate="fade-left" novalidate>
+          <div class="form-group" id="formGroupName">
+            <label for="contactName" class="form-label">Your Name</label>
+            <div class="input-wrapper">
+              <i class="fas fa-user input-icon"></i>
+              <input type="text" id="contactName" name="name" class="form-input" placeholder="John Doe" required autocomplete="name" />
+            </div>
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group" id="formGroupEmail">
+            <label for="contactEmail" class="form-label">Email Address</label>
+            <div class="input-wrapper">
+              <i class="fas fa-envelope input-icon"></i>
+              <input type="email" id="contactEmail" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email" />
+            </div>
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group" id="formGroupSubject">
+            <label for="contactSubject" class="form-label">Subject</label>
+            <div class="input-wrapper">
+              <i class="fas fa-tag input-icon"></i>
+              <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="Internship Opportunity" required />
+            </div>
+            <span class="form-error" id="subjectError"></span>
+          </div>
+          <div class="form-group" id="formGroupMessage">
+            <label for="contactMessage" class="form-label">Your Message</label>
+            <div class="input-wrapper textarea-wrapper">
+              <i class="fas fa-comment input-icon textarea-icon"></i>
+              <textarea id="contactMessage" name="message" class="form-input form-textarea" placeholder="Hi Abdul, I'd like to discuss..." required rows="5"></textarea>
+            </div>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            <span id="submitText">Send Message</span>
+            <i class="fas fa-paper-plane" id="submitIcon"></i>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i>
+            <span>Message sent successfully! I'll reply soon.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       FOOTER
+  ================================= -->
+  <footer class="footer">
+    <div class="footer-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo">
+            <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p class="footer-tagline">Building the future, one commit at a time.</p>
+        </div>
+        <div class="footer-links-group">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Projects</h4>
+          <ul>
+            <li><a href="https://github.com/bsse23014ituedupk/AIStudyAssistant-" target="_blank" rel="noopener noreferrer">AI Study Assistant</a></li>
+            <li><a href="https://github.com/bsse23014ituedupk/universityManagmentSystemoop" target="_blank" rel="noopener noreferrer">UMS</a></li>
+            <li><a href="https://github.com/bsse23014ituedupk/UMS.MicroServices" target="_blank" rel="noopener noreferrer">UMS Docker</a></li>
+            <li><a href="https://github.com/bsse23014ituedupk/RescueLinkC-ProjectDSA" target="_blank" rel="noopener noreferrer">Rescue Line</a></li>
+          </ul>
+        </div>
+        <div class="footer-social-group">
+          <h4>Connect</h4>
+          <div class="footer-socials">
+            <a href="https://github.com/bsse23014ituedupk" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="footer-social-btn">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/abdulsamad" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-social-btn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:abdulsamad@email.com" aria-label="Email" class="footer-social-btn">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear">2024</span> Abdul Samad. Crafted with <span class="heart">❤️</span> in Lahore, Pakistan.</p>
+        <p class="footer-credit">Built with pure HTML, CSS &amp; JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================
+       BACK TO TOP
+  ================================= -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>

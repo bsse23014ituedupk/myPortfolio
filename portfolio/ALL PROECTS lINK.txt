@@ -1,0 +1,9 @@
+ALL PROECTS lINK
+
+Rescue Line System c++:   https://github.com/bsse23014ituedupk/RescueLinkC-ProjectDSA
+University Management System c++ : "https://github.com/bsse23014ituedupk/universityManagmentSystemoop"
+UMS Containerized Deployment : https://github.com/bsse23014ituedupk/UMS.MicroServices   tool docker GitHub action for ci cd  AWS for deployment
+Rescue Line System c++:   https://github.com/bsse23014ituedupk/RescueLinkC-ProjectDSA
+University Management System c++ : "https://github.com/bsse23014ituedupk/universityManagmentSystemoop"
+fast api link: https://github.com/bsse23014ituedupk/patient-management-fastapi
+AI Study Assistant (PDF Chatbot) : "https://github.com/bsse23014ituedupk/AIStudyAssistant-"

@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Abdul Samad – Software Engineering student at ITU Lahore. Portfolio showcasing AI, C++, Python, Docker projects and skills." />
-  <meta name="keywords" content="Abdul Samad, Software Engineer, Portfolio, ITU Lahore, AI, Python, C++, Docker, LangChain" />
+  <meta name="description"
+    content="Abdul Samad – Software Engineering student at ITU Lahore. Portfolio showcasing AI, C++, Python, Docker projects and skills." />
+  <meta name="keywords"
+    content="Abdul Samad, Software Engineer, Portfolio, ITU Lahore, AI, Python, C++, Docker, LangChain" />
   <meta name="author" content="Abdul Samad" />
   <title>Abdul Samad | Software Engineer Portfolio</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -19,7 +24,17 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- === PREMIUM GLOBAL LAYERS === -->
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true">
+    <span class="aurora-orb"></span>
+    <span class="aurora-orb"></span>
+    <span class="aurora-orb"></span>
+  </div>
+  <div class="noise-overlay" aria-hidden="true"></div>
 
   <!-- ==============================
        PRELOADER
@@ -75,6 +90,8 @@
        HERO SECTION
   ================================= -->
   <section id="hero" class="hero-section">
+    <!-- Neon grid background -->
+    <div class="hero-grid" aria-hidden="true"></div>
     <!-- Animated Particle Background -->
     <canvas id="particleCanvas" aria-hidden="true"></canvas>
 
@@ -85,30 +102,35 @@
 
     <div class="hero-content">
       <div class="hero-text">
-        <div class="hero-greeting reveal-text">
+        <div class="hero-greeting reveal-text hero-intro hero-intro--1">
           <span class="greeting-icon">👋</span>
           <span>Hello, World! I'm</span>
         </div>
 
-        <h1 class="hero-name">
-          <span class="name-letter" style="--i:0">A</span><span class="name-letter" style="--i:1">b</span><span class="name-letter" style="--i:2">d</span><span class="name-letter" style="--i:3">u</span><span class="name-letter" style="--i:4">l</span>
+        <h1 class="hero-name hero-intro hero-intro--2">
+          <span class="name-letter" style="--i:0">A</span><span class="name-letter" style="--i:1">b</span><span
+            class="name-letter" style="--i:2">d</span><span class="name-letter" style="--i:3">u</span><span
+            class="name-letter" style="--i:4">l</span>
           <span class="name-space">&nbsp;</span>
-          <span class="name-letter name-accent" style="--i:5">S</span><span class="name-letter name-accent" style="--i:6">a</span><span class="name-letter name-accent" style="--i:7">m</span><span class="name-letter name-accent" style="--i:8">a</span><span class="name-letter name-accent" style="--i:9">d</span>
+          <span class="name-letter name-accent" style="--i:5">S</span><span class="name-letter name-accent"
+            style="--i:6">a</span><span class="name-letter name-accent" style="--i:7">m</span><span
+            class="name-letter name-accent" style="--i:8">a</span><span class="name-letter name-accent"
+            style="--i:9">d</span>
         </h1>
 
-        <div class="hero-role">
+        <div class="hero-role hero-intro hero-intro--3">
           <span class="role-prefix">I'm a&nbsp;</span>
           <span class="typed-text" id="typedText" aria-live="polite"></span>
           <span class="typed-cursor" aria-hidden="true">|</span>
         </div>
 
-        <p class="hero-description">
+        <p class="hero-description hero-intro hero-intro--4">
           Software Engineering student at <span class="highlight">ITU Lahore</span> passionate about building
           scalable, efficient real-world applications. Exploring <span class="highlight">AI&nbsp;/ ML</span>,
           <span class="highlight">LangChain</span>, and modern DevOps practices.
         </p>
 
-        <div class="hero-cta">
+        <div class="hero-cta hero-intro hero-intro--5">
           <a href="#projects" class="btn btn--primary" id="viewWorkBtn">
             <span>View My Work</span>
             <i class="fas fa-arrow-right"></i>
@@ -119,14 +141,16 @@
           </a>
         </div>
 
-        <div class="hero-social">
-          <a href="https://github.com/bsse23014ituedupk" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+        <div class="hero-social hero-intro hero-intro--6">
+          <a href="https://github.com/bsse23014ituedupk" target="_blank" rel="noopener noreferrer" class="social-icon"
+            aria-label="GitHub Profile">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://www.linkedin.com/in/abdulsamad" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+          <a href="https://linkedin.com/in/abdul-samad-1a32b13b8" target="_blank" rel="noopener noreferrer" class="social-icon"
+            aria-label="LinkedIn Profile">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="mailto:abdulsamad@email.com" class="social-icon" aria-label="Email">
+          <a href="mailto:abdulsami40540@email.com" class="social-icon" aria-label="Email">
             <i class="fas fa-envelope"></i>
           </a>
           <a href="tel:+923286008528" class="social-icon" aria-label="Phone">
@@ -135,13 +159,14 @@
         </div>
       </div>
 
-      <div class="hero-image-wrapper">
+      <div class="hero-image-wrapper hero-img-intro">
         <div class="hero-image-ring ring-1" aria-hidden="true"></div>
         <div class="hero-image-ring ring-2" aria-hidden="true"></div>
         <div class="hero-image-ring ring-3" aria-hidden="true"></div>
         <div class="hero-image-container">
           <!-- Replace with real profile photo -->
-          <img src="images/profile.png" alt="Abdul Samad - Software Engineer" class="hero-img" id="heroImg" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'340\' height=\'340\'%3E%3Cdefs%3E%3ClinearGradient id=\'g\' x1=\'0\' y1=\'0\' x2=\'1\' y2=\'1\'%3E%3Cstop offset=\'0\' stop-color=\'%2300d4ff\' stop-opacity=\'0.3\'/%3E%3Cstop offset=\'1\' stop-color=\'%23a855f7\' stop-opacity=\'0.4\'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'340\' height=\'340\' fill=\'%230d0d1f\'/%3E%3Crect width=\'340\' height=\'340\' fill=\'url(%23g)\'/%3E%3Ctext x=\'50%25\' y=\'45%25\' font-family=\'Arial\' font-size=\'80\' fill=\'%2300d4ff\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E👤%3C/text%3E%3Ctext x=\'50%25\' y=\'70%25\' font-family=\'Arial\' font-size=\'22\' fill=\'%23e2e8f0\' text-anchor=\'middle\'%3EAbdul Samad%3C/text%3E%3C/svg%3E'" />
+          <img src="images/profile.png" alt="Abdul Samad - Software Engineer" class="hero-img" id="heroImg"
+            onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'340\' height=\'340\'%3E%3Cdefs%3E%3ClinearGradient id=\'g\' x1=\'0\' y1=\'0\' x2=\'1\' y2=\'1\'%3E%3Cstop offset=\'0\' stop-color=\'%2300d4ff\' stop-opacity=\'0.3\'/%3E%3Cstop offset=\'1\' stop-color=\'%23a855f7\' stop-opacity=\'0.4\'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'340\' height=\'340\' fill=\'%230d0d1f\'/%3E%3Crect width=\'340\' height=\'340\' fill=\'url(%23g)\'/%3E%3Ctext x=\'50%25\' y=\'45%25\' font-family=\'Arial\' font-size=\'80\' fill=\'%2300d4ff\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E👤%3C/text%3E%3Ctext x=\'50%25\' y=\'70%25\' font-family=\'Arial\' font-size=\'22\' fill=\'%23e2e8f0\' text-anchor=\'middle\'%3EAbdul Samad%3C/text%3E%3C/svg%3E'" />
           <div class="hero-image-glow" aria-hidden="true"></div>
         </div>
         <!-- Floating badges -->
@@ -183,7 +208,8 @@
       <div class="about-grid">
         <div class="about-image-col" data-animate="fade-right">
           <div class="about-img-wrapper">
-            <img src="images/profile.png" alt="Abdul Samad" class="about-img" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'450\'%3E%3Cdefs%3E%3ClinearGradient id=\'g\' x1=\'0\' y1=\'0\' x2=\'1\' y2=\'1\'%3E%3Cstop offset=\'0\' stop-color=\'%2300d4ff\' stop-opacity=\'0.15\'/%3E%3Cstop offset=\'1\' stop-color=\'%23a855f7\' stop-opacity=\'0.25\'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'400\' height=\'450\' fill=\'%230d0d1f\' rx=\'20\'/%3E%3Crect width=\'400\' height=\'450\' fill=\'url(%23g)\' rx=\'20\'/%3E%3Ctext x=\'50%25\' y=\'40%25\' font-family=\'Arial\' font-size=\'90\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E👨‍💻%3C/text%3E%3Ctext x=\'50%25\' y=\'65%25\' font-family=\'Arial\' font-size=\'24\' fill=\'%2300d4ff\' text-anchor=\'middle\'%3EAbdul Samad%3C/text%3E%3Ctext x=\'50%25\' y=\'78%25\' font-family=\'Arial\' font-size=\'14\' fill=\'%2394a3b8\' text-anchor=\'middle\'%3ESoftware Engineer%3C/text%3E%3C/svg%3E'" />
+            <img src="images/profile.png" alt="Abdul Samad" class="about-img"
+              onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'450\'%3E%3Cdefs%3E%3ClinearGradient id=\'g\' x1=\'0\' y1=\'0\' x2=\'1\' y2=\'1\'%3E%3Cstop offset=\'0\' stop-color=\'%2300d4ff\' stop-opacity=\'0.15\'/%3E%3Cstop offset=\'1\' stop-color=\'%23a855f7\' stop-opacity=\'0.25\'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'400\' height=\'450\' fill=\'%230d0d1f\' rx=\'20\'/%3E%3Crect width=\'400\' height=\'450\' fill=\'url(%23g)\' rx=\'20\'/%3E%3Ctext x=\'50%25\' y=\'40%25\' font-family=\'Arial\' font-size=\'90\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E👨‍💻%3C/text%3E%3Ctext x=\'50%25\' y=\'65%25\' font-family=\'Arial\' font-size=\'24\' fill=\'%2300d4ff\' text-anchor=\'middle\'%3EAbdul Samad%3C/text%3E%3Ctext x=\'50%25\' y=\'78%25\' font-family=\'Arial\' font-size=\'14\' fill=\'%2394a3b8\' text-anchor=\'middle\'%3ESoftware Engineer%3C/text%3E%3C/svg%3E'" />
             <div class="about-img-border" aria-hidden="true"></div>
             <div class="about-img-dots" aria-hidden="true"></div>
           </div>
@@ -487,14 +513,17 @@
                 </div>
                 <h3 class="project-title">AI Study Assistant</h3>
                 <p class="project-subtitle">PDF Chatbot powered by LangChain & Streamlit</p>
-                <a href="https://github.com/bsse23014ituedupk/AIStudyAssistant-" target="_blank" rel="noopener noreferrer" class="card-front-btn" id="ai-github-btn">
+                <a href="https://github.com/bsse23014ituedupk/AIStudyAssistant-" target="_blank"
+                  rel="noopener noreferrer" class="card-front-btn" id="ai-github-btn">
                   <i class="fab fa-github"></i> View on GitHub
                 </a>
               </div>
             </div>
             <div class="project-card-back">
               <h3 class="back-title">AI Study Assistant</h3>
-              <p class="back-desc">An AI-powered chatbot that answers user queries from uploaded PDF documents. Features context-aware query answering, document parsing, and response generation pipelines using Python and Streamlit.</p>
+              <p class="back-desc">An AI-powered chatbot that answers user queries from uploaded PDF documents. Features
+                context-aware query answering, document parsing, and response generation pipelines using Python and
+                Streamlit.</p>
               <ul class="back-features">
                 <li><i class="fas fa-check-circle"></i> Context-aware PDF Q&amp;A</li>
                 <li><i class="fas fa-check-circle"></i> Document parsing pipelines</li>
@@ -502,7 +531,8 @@
                 <li><i class="fas fa-check-circle"></i> Streamlit web interface</li>
               </ul>
               <div class="back-links">
-                <a href="https://github.com/bsse23014ituedupk/AIStudyAssistant-" target="_blank" rel="noopener noreferrer" class="back-btn" aria-label="View AI Study Assistant on GitHub">
+                <a href="https://github.com/bsse23014ituedupk/AIStudyAssistant-" target="_blank"
+                  rel="noopener noreferrer" class="back-btn" aria-label="View AI Study Assistant on GitHub">
                   <i class="fab fa-github"></i> GitHub
                 </a>
               </div>
@@ -527,14 +557,17 @@
                 </div>
                 <h3 class="project-title">University Management System</h3>
                 <p class="project-subtitle">Full-featured desktop academic management system</p>
-                <a href="https://github.com/bsse23014ituedupk/universityManagmentSystemoop" target="_blank" rel="noopener noreferrer" class="card-front-btn" id="ums-github-btn">
+                <a href="https://github.com/bsse23014ituedupk/universityManagmentSystemoop" target="_blank"
+                  rel="noopener noreferrer" class="card-front-btn" id="ums-github-btn">
                   <i class="fab fa-github"></i> View on GitHub
                 </a>
               </div>
             </div>
             <div class="project-card-back">
               <h3 class="back-title">University Management System</h3>
-              <p class="back-desc">A fully-featured desktop system to manage students, faculty, and academic operations. Demonstrates advanced OOP principles including inheritance, polymorphism, aggregation, and composition.</p>
+              <p class="back-desc">A fully-featured desktop system to manage students, faculty, and academic operations.
+                Demonstrates advanced OOP principles including inheritance, polymorphism, aggregation, and composition.
+              </p>
               <ul class="back-features">
                 <li><i class="fas fa-check-circle"></i> Student &amp; faculty modules</li>
                 <li><i class="fas fa-check-circle"></i> Enrollment &amp; course handling</li>
@@ -542,7 +575,8 @@
                 <li><i class="fas fa-check-circle"></i> Full OOP architecture</li>
               </ul>
               <div class="back-links">
-                <a href="https://github.com/bsse23014ituedupk/universityManagmentSystemoop" target="_blank" rel="noopener noreferrer" class="back-btn" aria-label="View UMS on GitHub">
+                <a href="https://github.com/bsse23014ituedupk/universityManagmentSystemoop" target="_blank"
+                  rel="noopener noreferrer" class="back-btn" aria-label="View UMS on GitHub">
                   <i class="fab fa-github"></i> GitHub
                 </a>
               </div>
@@ -568,14 +602,16 @@
                 </div>
                 <h3 class="project-title">UMS Containerized Deployment</h3>
                 <p class="project-subtitle">Docker + CI/CD + AWS microservices deployment</p>
-                <a href="https://github.com/bsse23014ituedupk/UMS.MicroServices" target="_blank" rel="noopener noreferrer" class="card-front-btn" id="docker-github-btn">
+                <a href="https://github.com/bsse23014ituedupk/UMS.MicroServices" target="_blank"
+                  rel="noopener noreferrer" class="card-front-btn" id="docker-github-btn">
                   <i class="fab fa-github"></i> View on GitHub
                 </a>
               </div>
             </div>
             <div class="project-card-back">
               <h3 class="back-title">UMS Containerized Deployment</h3>
-              <p class="back-desc">Deployed the University Management System in a containerized environment using Docker for portable and consistent deployment, with automated CI/CD workflows managed by GitHub Actions.</p>
+              <p class="back-desc">Deployed the University Management System in a containerized environment using Docker
+                for portable and consistent deployment, with automated CI/CD workflows managed by GitHub Actions.</p>
               <ul class="back-features">
                 <li><i class="fas fa-check-circle"></i> Docker containerization</li>
                 <li><i class="fas fa-check-circle"></i> GitHub Actions CI/CD</li>
@@ -583,7 +619,8 @@
                 <li><i class="fas fa-check-circle"></i> Microservices architecture</li>
               </ul>
               <div class="back-links">
-                <a href="https://github.com/bsse23014ituedupk/UMS.MicroServices" target="_blank" rel="noopener noreferrer" class="back-btn" aria-label="View UMS Deployment on GitHub">
+                <a href="https://github.com/bsse23014ituedupk/UMS.MicroServices" target="_blank"
+                  rel="noopener noreferrer" class="back-btn" aria-label="View UMS Deployment on GitHub">
                   <i class="fab fa-github"></i> GitHub
                 </a>
               </div>
@@ -608,14 +645,17 @@
                 </div>
                 <h3 class="project-title">Rescue Line System</h3>
                 <p class="project-subtitle">Optimized rescue-routing engine using advanced data structures</p>
-                <a href="https://github.com/bsse23014ituedupk/RescueLinkC-ProjectDSA" target="_blank" rel="noopener noreferrer" class="card-front-btn" id="rescue-github-btn">
+                <a href="https://github.com/bsse23014ituedupk/RescueLinkC-ProjectDSA" target="_blank"
+                  rel="noopener noreferrer" class="card-front-btn" id="rescue-github-btn">
                   <i class="fab fa-github"></i> View on GitHub
                 </a>
               </div>
             </div>
             <div class="project-card-back">
               <h3 class="back-title">Rescue Line System</h3>
-              <p class="back-desc">An optimized rescue-routing system built using core Data Structures concepts. Features a priority-based routing engine with algorithm optimization and structured, clean data handling techniques.</p>
+              <p class="back-desc">An optimized rescue-routing system built using core Data Structures concepts.
+                Features a priority-based routing engine with algorithm optimization and structured, clean data handling
+                techniques.</p>
               <ul class="back-features">
                 <li><i class="fas fa-check-circle"></i> Priority-based routing</li>
                 <li><i class="fas fa-check-circle"></i> Advanced graph algorithms</li>
@@ -623,7 +663,8 @@
                 <li><i class="fas fa-check-circle"></i> Clean DSA architecture</li>
               </ul>
               <div class="back-links">
-                <a href="https://github.com/bsse23014ituedupk/RescueLinkC-ProjectDSA" target="_blank" rel="noopener noreferrer" class="back-btn" aria-label="View Rescue Line on GitHub">
+                <a href="https://github.com/bsse23014ituedupk/RescueLinkC-ProjectDSA" target="_blank"
+                  rel="noopener noreferrer" class="back-btn" aria-label="View Rescue Line on GitHub">
                   <i class="fab fa-github"></i> GitHub
                 </a>
               </div>
@@ -636,7 +677,8 @@
           <div class="project-card-inner">
             <div class="project-card-front">
               <div class="project-img-wrapper">
-                <img src="images/fastApi.png" alt="FastAPI Patient Management project" class="project-img" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'200\'%3E%3Cdefs%3E%3ClinearGradient id=\'g\' x1=\'0\' y1=\'0\' x2=\'1\' y2=\'1\'%3E%3Cstop offset=\'0\' stop-color=\'%23060611\'/%3E%3Cstop offset=\'1\' stop-color=\'%231a1000\'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'800\' height=\'200\' fill=\'url(%23g)\'/%3E%3Ctext x=\'50%25\' y=\'40%25\' font-family=\'Arial\' font-size=\'40\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E%E2%9A%A1%3C/text%3E%3Ctext x=\'50%25\' y=\'68%25\' font-family=\'Arial\' font-size=\'18\' fill=\'%23f59e0b\' text-anchor=\'middle\'%3EPatient+Management+FastAPI%3C/text%3E%3C/svg%3E'" />
+                <img src="images/fastApi.png" alt="FastAPI Patient Management project" class="project-img"
+                  onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'200\'%3E%3Cdefs%3E%3ClinearGradient id=\'g\' x1=\'0\' y1=\'0\' x2=\'1\' y2=\'1\'%3E%3Cstop offset=\'0\' stop-color=\'%23060611\'/%3E%3Cstop offset=\'1\' stop-color=\'%231a1000\'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'800\' height=\'200\' fill=\'url(%23g)\'/%3E%3Ctext x=\'50%25\' y=\'40%25\' font-family=\'Arial\' font-size=\'40\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E%E2%9A%A1%3C/text%3E%3Ctext x=\'50%25\' y=\'68%25\' font-family=\'Arial\' font-size=\'18\' fill=\'%23f59e0b\' text-anchor=\'middle\'%3EPatient+Management+FastAPI%3C/text%3E%3C/svg%3E'" />
                 <div class="project-overlay" aria-hidden="true">
                   <span class="project-overlay-text">See Details</span>
                 </div>
@@ -648,14 +690,16 @@
                 </div>
                 <h3 class="project-title">Patient Management API</h3>
                 <p class="project-subtitle">RESTful FastAPI service for patient data management</p>
-                <a href="https://github.com/bsse23014ituedupk/patient-management-fastapi" target="_blank" rel="noopener noreferrer" class="card-front-btn" id="fastapi-github-btn">
+                <a href="https://github.com/bsse23014ituedupk/patient-management-fastapi" target="_blank"
+                  rel="noopener noreferrer" class="card-front-btn" id="fastapi-github-btn">
                   <i class="fab fa-github"></i> View on GitHub
                 </a>
               </div>
             </div>
             <div class="project-card-back">
               <h3 class="back-title">Patient Management FastAPI</h3>
-              <p class="back-desc">A RESTful API built with FastAPI for managing patient data efficiently. Demonstrates clean API design, proper routing, data validation, and Python backend development best practices.</p>
+              <p class="back-desc">A RESTful API built with FastAPI for managing patient data efficiently. Demonstrates
+                clean API design, proper routing, data validation, and Python backend development best practices.</p>
               <ul class="back-features">
                 <li><i class="fas fa-check-circle"></i> RESTful API design</li>
                 <li><i class="fas fa-check-circle"></i> FastAPI framework</li>
@@ -663,7 +707,8 @@
                 <li><i class="fas fa-check-circle"></i> Clean Python backend</li>
               </ul>
               <div class="back-links">
-                <a href="https://github.com/bsse23014ituedupk/patient-management-fastapi" target="_blank" rel="noopener noreferrer" class="back-btn" aria-label="View Patient Management on GitHub">
+                <a href="https://github.com/bsse23014ituedupk/patient-management-fastapi" target="_blank"
+                  rel="noopener noreferrer" class="back-btn" aria-label="View Patient Management on GitHub">
                   <i class="fab fa-github"></i> GitHub
                 </a>
               </div>
@@ -674,7 +719,8 @@
       </div><!-- /projects-grid -->
 
       <div class="projects-cta" data-animate="fade-up">
-        <a href="https://github.com/bsse23014ituedupk" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg">
+        <a href="https://github.com/bsse23014ituedupk" target="_blank" rel="noopener noreferrer"
+          class="btn btn--outline btn--lg">
           <i class="fab fa-github"></i>
           <span>View All on GitHub</span>
         </a>
@@ -755,7 +801,8 @@
             <i class="fab fa-docker"></i>
           </div>
           <h3 class="achievement-title">Docker & DevOps</h3>
-          <p class="achievement-desc">Hands-on experience containerizing applications with Docker and managing version control for real-world project deployments.</p>
+          <p class="achievement-desc">Hands-on experience containerizing applications with Docker and managing version
+            control for real-world project deployments.</p>
           <div class="achievement-tag">DevOps</div>
         </div>
 
@@ -764,7 +811,8 @@
             <i class="fas fa-infinity"></i>
           </div>
           <h3 class="achievement-title">CI/CD Automation</h3>
-          <p class="achievement-desc">Built and managed automated CI/CD pipelines using GitHub Actions for consistent, reliable software delivery workflows.</p>
+          <p class="achievement-desc">Built and managed automated CI/CD pipelines using GitHub Actions for consistent,
+            reliable software delivery workflows.</p>
           <div class="achievement-tag">Automation</div>
         </div>
 
@@ -773,7 +821,8 @@
             <i class="fas fa-robot"></i>
           </div>
           <h3 class="achievement-title">AI Application Builder</h3>
-          <p class="achievement-desc">Actively building AI-powered applications using LangChain and Streamlit, exploring the frontier of Generative AI and LLMs.</p>
+          <p class="achievement-desc">Actively building AI-powered applications using LangChain and Streamlit, exploring
+            the frontier of Generative AI and LLMs.</p>
           <div class="achievement-tag">AI / ML</div>
         </div>
 
@@ -782,7 +831,8 @@
             <i class="fas fa-code-branch"></i>
           </div>
           <h3 class="achievement-title">Full-Stack Project Delivery</h3>
-          <p class="achievement-desc">Designed and delivered multiple end-to-end software projects from ideation to deployment, demonstrating full software lifecycle skills.</p>
+          <p class="achievement-desc">Designed and delivered multiple end-to-end software projects from ideation to
+            deployment, demonstrating full software lifecycle skills.</p>
           <div class="achievement-tag">Engineering</div>
         </div>
 
@@ -791,7 +841,8 @@
             <i class="fas fa-puzzle-piece"></i>
           </div>
           <h3 class="achievement-title">Algorithm Design</h3>
-          <p class="achievement-desc">Built optimized algorithmic solutions using advanced data structures — graphs, priority queues, and routing algorithms.</p>
+          <p class="achievement-desc">Built optimized algorithmic solutions using advanced data structures — graphs,
+            priority queues, and routing algorithms.</p>
           <div class="achievement-tag">DSA</div>
         </div>
 
@@ -800,7 +851,8 @@
             <i class="fas fa-graduation-cap"></i>
           </div>
           <h3 class="achievement-title">ITU Scholar</h3>
-          <p class="achievement-desc">Enrolled at one of Pakistan's top CS/SE institutions — Information Technology University, Lahore — pursuing BS Software Engineering.</p>
+          <p class="achievement-desc">Enrolled at one of Pakistan's top CS/SE institutions — Information Technology
+            University, Lahore — pursuing BS Software Engineering.</p>
           <div class="achievement-tag">Education</div>
         </div>
       </div>
@@ -823,14 +875,15 @@
         <!-- Contact Info -->
         <div class="contact-info" data-animate="fade-right">
           <h3 class="contact-info-title">Let's Talk 💬</h3>
-          <p class="contact-info-desc">Whether you have an internship opportunity, a collaboration idea, or just want to say hi — I'd love to hear from you.</p>
+          <p class="contact-info-desc">Whether you have an internship opportunity, a collaboration idea, or just want to
+            say hi — I'd love to hear from you.</p>
 
           <div class="contact-details">
-            <a href="mailto:abdulsamad@email.com" class="contact-detail-item" id="emailLink">
+            <a href="mailto:abdulsami40540@email.com" class="contact-detail-item" id="emailLink">
               <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
               <div>
                 <span class="detail-label">Email</span>
-                <span class="detail-value">abdulsamad@email.com</span>
+                <span class="detail-value">abdulsami40540@email.com</span>
               </div>
             </a>
             <a href="tel:+923286008528" class="contact-detail-item" id="phoneLink">
@@ -850,11 +903,13 @@
           </div>
 
           <div class="contact-social">
-            <a href="https://github.com/bsse23014ituedupk" target="_blank" rel="noopener noreferrer" class="social-link" id="githubContactLink" aria-label="GitHub">
+            <a href="https://github.com/bsse23014ituedupk" target="_blank" rel="noopener noreferrer" class="social-link"
+              id="githubContactLink" aria-label="GitHub">
               <i class="fab fa-github"></i>
               <span>GitHub</span>
             </a>
-            <a href="https://www.linkedin.com/in/abdulsamad" target="_blank" rel="noopener noreferrer" class="social-link" id="linkedinContactLink" aria-label="LinkedIn">
+            <a href="https://linkedin.com/in/abdul-samad-1a32b13b8" target="_blank" rel="noopener noreferrer"
+              class="social-link" id="linkedinContactLink" aria-label="LinkedIn">
               <i class="fab fa-linkedin"></i>
               <span>LinkedIn</span>
             </a>
@@ -873,7 +928,8 @@
             <label for="contactName" class="form-label">Your Name</label>
             <div class="input-wrapper">
               <i class="fas fa-user input-icon"></i>
-              <input type="text" id="contactName" name="name" class="form-input" placeholder="John Doe" required autocomplete="name" />
+              <input type="text" id="contactName" name="name" class="form-input" placeholder="John Doe" required
+                autocomplete="name" />
             </div>
             <span class="form-error" id="nameError"></span>
           </div>
@@ -881,7 +937,8 @@
             <label for="contactEmail" class="form-label">Email Address</label>
             <div class="input-wrapper">
               <i class="fas fa-envelope input-icon"></i>
-              <input type="email" id="contactEmail" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email" />
+              <input type="email" id="contactEmail" name="email" class="form-input" placeholder="john@example.com"
+                required autocomplete="email" />
             </div>
             <span class="form-error" id="emailError"></span>
           </div>
@@ -889,7 +946,8 @@
             <label for="contactSubject" class="form-label">Subject</label>
             <div class="input-wrapper">
               <i class="fas fa-tag input-icon"></i>
-              <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="Internship Opportunity" required />
+              <input type="text" id="contactSubject" name="subject" class="form-input"
+                placeholder="Internship Opportunity" required />
             </div>
             <span class="form-error" id="subjectError"></span>
           </div>
@@ -897,7 +955,8 @@
             <label for="contactMessage" class="form-label">Your Message</label>
             <div class="input-wrapper textarea-wrapper">
               <i class="fas fa-comment input-icon textarea-icon"></i>
-              <textarea id="contactMessage" name="message" class="form-input form-textarea" placeholder="Hi Abdul, I'd like to discuss..." required rows="5"></textarea>
+              <textarea id="contactMessage" name="message" class="form-input form-textarea"
+                placeholder="Hi Abdul, I'd like to discuss..." required rows="5"></textarea>
             </div>
             <span class="form-error" id="messageError"></span>
           </div>
@@ -939,30 +998,37 @@
         <div class="footer-links-group">
           <h4>Projects</h4>
           <ul>
-            <li><a href="https://github.com/bsse23014ituedupk/AIStudyAssistant-" target="_blank" rel="noopener noreferrer">AI Study Assistant</a></li>
-            <li><a href="https://github.com/bsse23014ituedupk/universityManagmentSystemoop" target="_blank" rel="noopener noreferrer">UMS</a></li>
-            <li><a href="https://github.com/bsse23014ituedupk/UMS.MicroServices" target="_blank" rel="noopener noreferrer">UMS Docker</a></li>
-            <li><a href="https://github.com/bsse23014ituedupk/RescueLinkC-ProjectDSA" target="_blank" rel="noopener noreferrer">Rescue Line</a></li>
+            <li><a href="https://github.com/bsse23014ituedupk/AIStudyAssistant-" target="_blank"
+                rel="noopener noreferrer">AI Study Assistant</a></li>
+            <li><a href="https://github.com/bsse23014ituedupk/universityManagmentSystemoop" target="_blank"
+                rel="noopener noreferrer">UMS</a></li>
+            <li><a href="https://github.com/bsse23014ituedupk/UMS.MicroServices" target="_blank"
+                rel="noopener noreferrer">UMS Docker</a></li>
+            <li><a href="https://github.com/bsse23014ituedupk/RescueLinkC-ProjectDSA" target="_blank"
+                rel="noopener noreferrer">Rescue Line</a></li>
           </ul>
         </div>
         <div class="footer-social-group">
           <h4>Connect</h4>
           <div class="footer-socials">
-            <a href="https://github.com/bsse23014ituedupk" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="footer-social-btn">
+            <a href="https://github.com/bsse23014ituedupk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+              class="footer-social-btn">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/abdulsamad" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-social-btn">
+            <a href="https://linkedin.com/in/abdul-samad-1a32b13b8" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn" class="footer-social-btn">
               <i class="fab fa-linkedin"></i>
             </a>
-            <a href="mailto:abdulsamad@email.com" aria-label="Email" class="footer-social-btn">
+            <a href="mailto:abdulsami40540@email.com" aria-label="Email" class="footer-social-btn">
               <i class="fas fa-envelope"></i>
             </a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; <span id="footerYear">2024</span> Abdul Samad. Crafted with <span class="heart">❤️</span> in Lahore, Pakistan.</p>
-        <p class="footer-credit">Built with pure HTML, CSS &amp; JavaScript</p>
+        <p>&copy; <span id="footerYear">2024</span> Abdul Samad. Crafted with <span class="heart">❤️</span> in Lahore,
+          Pakistan.</p>
+        <p ></p>
       </div>
     </div>
   </footer>
@@ -977,4 +1043,5 @@
   <!-- Main Script -->
   <script src="script.js"></script>
 </body>
+
 </html>
